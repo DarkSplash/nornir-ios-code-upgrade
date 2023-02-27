@@ -28,6 +28,8 @@ This script uses Nornir, NAPALM, and netmiko to do the following:
     - Nornir log stored in <ins>**nornir.log**</ins> located in the same directory as the script
     - Cisco IOS logs for each switch stored in a <ins>**/logs**</ins> directory that is made during script execution
 
+This script was designed and tested on the Cisco 9000 series switches, and will have issues with older untested switch models due to small differences in IOS strings (c2XXXs and c3XXX switches will not work).
+
 Currently this script can only run on one IOS version/switch model at a time (I.E. Can run all 9300s at once or all 9200s at once but can't do 9300s and 9200s in the same run, the script would have to be ran twice due to different .bin files being used).
 
 ---
