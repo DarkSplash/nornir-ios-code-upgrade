@@ -19,7 +19,7 @@ from nornir_netmiko.tasks import netmiko_send_command
 from nornir_netmiko.tasks import netmiko_save_config
 import swan_logger                                      # Custom written logger script, look at commandLogger() or script for more details
 import threading                                        # Searches for # of switches in a stack, which uses slightly differnt variables and printFormatter()
-import os, signal
+import os, signal, sys
 
 
 # Packageless Terminal Colors: https://stackoverflow.com/a/21786287
@@ -109,7 +109,11 @@ def killScript(nr, nr2, thread):
     nr.close_connections()                                  # Closing both nornir objects
     nr2.close_connections()
     thread.set()                                            # Stopping download thread
-    os.kill(os.getpid(), signal.SIGBREAK)                   # Literally the only method I found to have the script exit
+
+    if sys.platform == 'win32':
+        os.kill(os.getpid(), signal.SIGBREAK)               # Literally the only method I found to have the script exit
+    else:
+        os.kill(os.getpid(), signal.SIGKILL)                # If you're not on windows
 
 
 # Pretty much pilfered entirely from: https://stackoverflow.com/a/2223182
