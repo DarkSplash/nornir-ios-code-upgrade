@@ -1,0 +1,7 @@
+---
+
+install:
+    platform: 'ios'
+
+bundle:
+    platform: 'ios'

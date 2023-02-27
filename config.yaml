@@ -1,0 +1,13 @@
+# You no longer need to change the host_file and group_file variables, now defined with relative paths
+--- 
+
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "hosts.yaml"
+        group_file: "groups.yaml"
+
+runner:
+    plugin: threaded
+    options:
+        num_workers: 100

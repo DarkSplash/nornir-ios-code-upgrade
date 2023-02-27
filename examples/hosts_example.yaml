@@ -1,0 +1,16 @@
+---
+
+c9348uxm-test-01:                                       # This lowest level name could be literally anything, just useful to use hostnames
+    hostname: c9348uxm-test-01.example.com              # Can be actual hostname
+    groups:
+        - install
+
+waffles:                                                # But if you wanted to, you could reference this host as waffles and it would work fine
+    hostname: 192.168.7.101                             # Or IP address
+    groups:
+        - install
+
+c9348uxm-test-bundle:
+    hostname: c9348uxm-test-bundle.example.com
+    groups:
+        - bundle

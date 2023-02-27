@@ -1,0 +1,12 @@
+---
+
+inventory:
+    plugin: SimpleInventory
+    options:                        # In reality, you wouldn't have the "_example" part of the filename
+        host_file: "hosts_example.yaml"
+        group_file: "groups_example.yaml"
+
+runner:
+    plugin: threaded
+    options:
+        num_workers: 100
