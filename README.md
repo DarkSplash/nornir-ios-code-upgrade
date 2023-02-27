@@ -37,7 +37,7 @@ A secondary script has also been made named `ios_download_file.py` that's sole p
 There is some additional functionality in `ios_download_file.py` compared to the INSTALL and BUNDLE scripts
 - Reports what percentage your download is at for all switches every 10 seconds
 - Ignores the <ins>**IOSVersion**</ins> variable in <ins>**ios_file_data.py**</ins> so you can download any file type without adding a fake version variable
-- Does not run <ins>**software auto-upgrade enable**</ins>, <ins>**no system ignore startupconfig switch all**</ins>, and other pre-update configs that are in the INSTALL and BUNDLE scripts
+- Does not run **software auto-upgrade enable**, **no system ignore startupconfig switch all**, and other pre-update configs that are in the INSTALL and BUNDLE scripts
 
 While any of the scripts can download the file to the switches, I would recommend using `ios_download_file.py` to download files if you plan on updating a large number of switches, and after the download, run the respective upgrade scripts.
 
