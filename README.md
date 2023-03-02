@@ -12,7 +12,7 @@ This repository contains a few python scripts that were developed with the purpo
 - [ios_upgrade_INSTALL.py](ios_upgrade_INSTALL.py) Script to upgrade switches whose switch image is using INSTALL mode
 - [ios_upgrade_BUNDLE.py](ios_upgrade_BUNDLE.py) Script to upgrade switches whose switch image is using BUNDLE mode
     - Additionally, this script takes BUNDLE mode switches and converts them to INSTALL mode automatically as part of the upgrade process
-- [ios_download_file.py](ios_download_file.py) Script to download a specified file via SCP
+- [ios_download_file.py](ios_download_file.py) Script to download a specified file via SCP (and works on most Cisco switch models)
 
 This script uses Nornir, NAPALM, and netmiko to do the following:
 - Checks to make sure all switches in the hosts file are online and responding to the script
